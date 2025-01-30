@@ -1,13 +1,13 @@
-package com.apollo.Hotal_Management;
+package com.apollo.Hospital_Management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HotalManagementApplication {
+public class HospitalManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HotalManagementApplication.class, args);
+		SpringApplication.run(HospitalManagementApplication.class, args);
 	}
 
 }

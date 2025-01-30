@@ -1,4 +1,4 @@
-package com.apollo.Hotal_Management.enums;
+package com.apollo.Hospital_Management.enums;
 
 
 public enum Gender {

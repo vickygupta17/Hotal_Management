@@ -1,8 +1,8 @@
-package com.apollo.Hotal_Management.controller;
+package com.apollo.Hospital_Management.controller;
 
-import com.apollo.Hotal_Management.dto.DoctorInputDto;
-import com.apollo.Hotal_Management.dto.DoctorOutputDto;
-import com.apollo.Hotal_Management.service.DoctorService;
+import com.apollo.Hospital_Management.dto.DoctorInputDto;
+import com.apollo.Hospital_Management.dto.DoctorOutputDto;
+import com.apollo.Hospital_Management.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

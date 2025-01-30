@@ -1,4 +1,4 @@
-package com.apollo.Hotal_Management.controller;
+package com.apollo.Hospital_Management.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

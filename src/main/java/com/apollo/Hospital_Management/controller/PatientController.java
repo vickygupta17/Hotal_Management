@@ -1,10 +1,9 @@
-package com.apollo.Hotal_Management.controller;
+package com.apollo.Hospital_Management.controller;
 
-import com.apollo.Hotal_Management.dto.DoctorInputDto;
-import com.apollo.Hotal_Management.dto.DoctorOutputDto;
-import com.apollo.Hotal_Management.dto.PatientInputDto;
-import com.apollo.Hotal_Management.dto.PatientOutputDto;
-import com.apollo.Hotal_Management.service.PatientService;
+import com.apollo.Hospital_Management.dto.DoctorOutputDto;
+import com.apollo.Hospital_Management.dto.PatientInputDto;
+import com.apollo.Hospital_Management.dto.PatientOutputDto;
+import com.apollo.Hospital_Management.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +23,7 @@ public class PatientController {
         return  new ResponseEntity<>(patientService.getPatient(id), HttpStatusCode.valueOf(200));
     }
 
-    @GetMapping("all")
+    @GetMapping()
     public ResponseEntity<List<PatientOutputDto>> getAllPatient() {
         return  new ResponseEntity<>(patientService.getAllPatients(),HttpStatusCode.valueOf(200));
     }
@@ -42,6 +41,13 @@ public class PatientController {
     @DeleteMapping("/{id}")
     public  ResponseEntity<String> removePatient(@PathVariable Long id) {
         return  new ResponseEntity<>(patientService.removePatient(id),HttpStatusCode.valueOf(200));
+
+    }
+
+    @GetMapping("/suggest{id}")
+        public ResponseEntity<List<DoctorOutputDto>> suggestDoctors(@PathVariable Long id) {
+            return new ResponseEntity<>(patientService.suggestDoctor(id),HttpStatusCode.valueOf(200));
+        
     }
 }
 
